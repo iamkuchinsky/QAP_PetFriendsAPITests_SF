@@ -182,7 +182,7 @@ def test_successful_add_photo_of_pet_incorrect_format(pet_photo='images\haha_ima
     assert 'pet_photo' in result
 
 
-def test_successful_add_photo_of_pet_incorrect_size(pet_photo='images\what_this.zip'):
+def test_successful_add_photo_of_pet_incorrect_size(pet_photo='images\what_this.7z'):
     """БАГ! Проверяем, что при добавлении фото питомца неккоретного формата и размера вернется код 400. Возвращается
     код 500"""
 
@@ -209,7 +209,7 @@ def test_get_all_pets_with_valid_key_332(animal_type = 'корги', age = '7'):
 
 
 def test_add_new_pet_with_invalid_image_size(name='Шарик', animal_type='дворняга',
-                                             age='10', pet_photo='images/what_this.zip'):
+                                             age='10', pet_photo='images/what_this.7z'):
     """БАГ! Проверяем что при добавлении некорректного размера фото вернется код 400. Получаем код 200"""
 
     # Получаем полный путь изображения питомца и сохраняем в переменную pet_photo
